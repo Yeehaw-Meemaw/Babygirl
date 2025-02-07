@@ -7,7 +7,7 @@ function selectOption(option) {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            displayTheDeal(); // Display the cat-heart.gif
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
@@ -57,20 +57,20 @@ function displayCat() {
 }
 
 // Function to display the cat-heart.gif
-function displayMyHeart() {
+function displayTheDeal() {
     // Clear existing content in the image container
     document.getElementById('image-container').innerHTML = '';
     // Get the container where the image will be displayed
     var imageContainer = document.getElementById('image-container');
     // Create a new Image element for the cat-heart
-    var MyHeartImage = new Image();
+    var DealImage = new Image();
     // Set the source (file path) for the cat-heart image
-    MyHeartImage.src = 'Very Important.gif'; // Assuming the cat-heart image is named "cat-heart.gif"
+    DealImage.src = 'the-deal.gif'; // Assuming the cat-heart image is named "cat-heart.gif"
     // Set alternative text for the image (for accessibility)
-    MyHeartImage.alt = 'Cat Heart';
+    DealImage.alt = 'The Deal';
     // When the cat-heart image is fully loaded, add it to the image container
-    MyHeartImage.onload = function() {
-        imageContainer.appendChild(MyHeartImage);
+    DealImage.onload = function() {
+        imageContainer.appendChild(DealImage);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
     };
